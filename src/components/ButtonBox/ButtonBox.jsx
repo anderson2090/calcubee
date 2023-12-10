@@ -1,11 +1,17 @@
-import React from 'react'
-import styles from './ButtonBox.module.css'
-
+import React from "react";
+import styles from "./ButtonBox.module.css";
+import Button from "../Button/Button";
 
 const ButtonBox = () => {
-  return (
-    <div className={styles.main}>ButtonBox</div>
-  )
-}
+  const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ".", "="];
 
-export default ButtonBox
+  return (
+    <div className={styles.main}>
+      {buttons.map((b) => (
+        <Button key={b} label={b} />
+      ))}
+    </div>
+  );
+};
+
+export default ButtonBox;

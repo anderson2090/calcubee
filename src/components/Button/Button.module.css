@@ -1,0 +1,18 @@
+.main {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fe3980;
+    border: 2px solid #c14f76;
+    border-radius: 20px;
+    color: #fcfffc;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.main:hover {
+    background-color: orange;
+    border: 2px solid orange;
+}
