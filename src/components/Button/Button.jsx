@@ -15,6 +15,10 @@ const Button = ({ label, buttonClickListener }) => {
   const handleClick = () => {
     if (label === "=") {
       evaluate();
+    } else if (label === "C") {
+      const numbers = [...screenNumbers];
+      numbers.pop();
+      setScreenNumbers([...numbers]);
     } else {
       buttonClickListener(label);
     }

@@ -17,6 +17,7 @@ const DigitsColumn = () => {
         <Button key={b} label={b} buttonClickListener={buttonClickListener} />
       ))}
       <Button label={"="} />
+      <Button label={"C"} />
     </div>
   );
 };

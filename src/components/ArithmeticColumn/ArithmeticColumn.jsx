@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 import { screenNumbersAtom } from "../../store/store";
 
 const ArithmeticColumn = () => {
-  const buttons = ["+", "-", "*", "/", "%"];
+  const buttons = ["+", "-", "*", "/"];
 
   const [screenNumbers, setScreenNumbers] = useRecoilState(screenNumbersAtom);
   const buttonClickListener = (n) => {
