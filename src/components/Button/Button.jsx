@@ -9,7 +9,7 @@ const Button = ({ label, buttonClickListener }) => {
 
   const evaluate = () => {
     const result = calculateExpression(screenNumbers);
-    console.log(result);
+    setScreenNumbers([result]);
   };
 
   const handleClick = () => {
