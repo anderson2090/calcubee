@@ -1,11 +1,17 @@
-import React from 'react'
-import styles from './ScreenBox.module.css'
-
+import React from "react";
+import styles from "./ScreenBox.module.css";
+import { useRecoilState } from "recoil";
+import { screenNumbersAtom } from "../../store/store";
+import ScreenNumber from "../ScreenNumber/ScreenNumber";
 
 const ScreenBox = () => {
-  return (
-    <div className={styles.main}>ScreenBox</div>
-  )
-}
+  const [screenNumbers, setScreenNumbers] = useRecoilState(screenNumbersAtom);
 
-export default ScreenBox
+  return (
+    <div className={styles.main}>
+      <ScreenNumber />
+    </div>
+  );
+};
+
+export default ScreenBox;
