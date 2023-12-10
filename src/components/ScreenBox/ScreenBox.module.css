@@ -1,6 +1,9 @@
 .main {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    gap: 1px;
     background-color: #1091f6;
     width: 100%;
     height: 40%;

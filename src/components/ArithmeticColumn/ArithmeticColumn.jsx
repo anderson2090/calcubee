@@ -1,13 +1,21 @@
 import React from "react";
 import styles from "./ArithmeticColumn.module.css";
 import Button from "../Button/Button";
+import { useRecoilState } from "recoil";
+import { screenNumbersAtom } from "../../store/store";
 
 const ArithmeticColumn = () => {
   const buttons = ["+", "-", "*", "/"];
+
+  const [screenNumbers, setScreenNumbers] = useRecoilState(screenNumbersAtom);
+  const buttonClickListener = (n) => {
+    setScreenNumbers([...screenNumbers, n]);
+  };
+
   return (
     <div className={styles.main}>
       {buttons.map((b) => (
-        <Button key={b} label={b} />
+        <Button key={b} label={b} buttonClickListener={buttonClickListener} />
       ))}
     </div>
   );

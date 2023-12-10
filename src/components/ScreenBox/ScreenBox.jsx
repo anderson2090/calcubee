@@ -9,7 +9,9 @@ const ScreenBox = () => {
 
   return (
     <div className={styles.main}>
-      <ScreenNumber />
+      {screenNumbers.map((n) => (
+        <ScreenNumber label={n} />
+      ))}
     </div>
   );
 };
