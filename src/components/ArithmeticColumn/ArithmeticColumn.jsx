@@ -3,7 +3,6 @@ import styles from "./ArithmeticColumn.module.css";
 import Button from "../Button/Button";
 import { useRecoilState } from "recoil";
 import { screenNumbersAtom } from "../../store/store";
-import { isLastElementString } from "../../utils/utils";
 
 const ArithmeticColumn = () => {
   const buttons = ["+", "-", "*", "/"];
