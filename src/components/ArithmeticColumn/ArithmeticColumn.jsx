@@ -31,6 +31,7 @@ const ArithmeticColumn = () => {
       {buttons.map((b) => (
         <Button key={b} label={b} buttonClickListener={buttonClickListener} />
       ))}
+     
     </div>
   );
 };

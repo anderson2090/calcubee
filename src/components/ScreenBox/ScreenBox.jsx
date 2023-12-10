@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 import styles from "./ScreenBox.module.css";
 import { useRecoilState } from "recoil";
 import { screenNumbersAtom } from "../../store/store";
@@ -10,7 +11,7 @@ const ScreenBox = () => {
   return (
     <div className={styles.main}>
       {screenNumbers.map((n) => (
-        <ScreenNumber label={n} />
+        <ScreenNumber key={uuidv4()} label={n} />
       ))}
     </div>
   );

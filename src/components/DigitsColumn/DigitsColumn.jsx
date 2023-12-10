@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 import { screenNumbersAtom } from "../../store/store";
 
 const DigitsColumn = () => {
-  const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ".", "="];
+  const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "."];
   const [screenNumbers, setScreenNumbers] = useRecoilState(screenNumbersAtom);
   const buttonClickListener = (n) => {
     setScreenNumbers([...screenNumbers, n]);
@@ -16,6 +16,7 @@ const DigitsColumn = () => {
       {buttons.map((b) => (
         <Button key={b} label={b} buttonClickListener={buttonClickListener} />
       ))}
+      <Button label={"="} />
     </div>
   );
 };
