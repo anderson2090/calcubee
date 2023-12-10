@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    align-items: center;
+    background-color: #1091f6;
+    flex: 1;
+    margin: 5px;
+    border-radius: 50px;
+    justify-content: center;
+    border: 10px solid #b6c0ea;
+}

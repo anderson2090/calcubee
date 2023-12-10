@@ -1,0 +1,8 @@
+.main {
+    display: flex;
+    flex-basis: 60%;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+
+}
