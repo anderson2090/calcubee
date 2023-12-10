@@ -10,9 +10,20 @@ const ArithmeticColumn = () => {
 
   const [screenNumbers, setScreenNumbers] = useRecoilState(screenNumbersAtom);
   const buttonClickListener = (n) => {
-    if (screenNumbers.length > 0 && 
-      n!==screenNumbers[screenNumbers.length-1]) {
-      setScreenNumbers([...screenNumbers, n]);
+    if (
+      screenNumbers.length > 0 &&
+      n !== screenNumbers[screenNumbers.length - 1]
+    ) {
+      if (
+        (n === "+" || n === "-" || n === "*" || n === "/") &&
+        typeof screenNumbers[screenNumbers.length - 1] !== "number"
+      ) {
+        const numbers = [...screenNumbers];
+        numbers.pop();
+        setScreenNumbers([...numbers, n]);
+      } else {
+        setScreenNumbers([...screenNumbers, n]);
+      }
     }
   };
 
