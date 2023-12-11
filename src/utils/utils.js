@@ -71,7 +71,31 @@ export const calculateExpression = (arr) => {
     }
   }
 
+  secondNumber = Number(secondNumber);
+  firstNumber = Number(firstNumber);
+
+  if (operators.includes(currentOperator)) {
+    switch (currentOperator) {
+      case "+":
+        result = firstNumber + secondNumber;
+        break;
+      case "-":
+        result = firstNumber - secondNumber;
+        break;
+      case "*":
+        result = firstNumber * secondNumber;
+        break;
+      case "/":
+        result = firstNumber / secondNumber;
+        break;
+      default:
+        break;
+    }
+  }
+
   console.log(`first Number: ${firstNumber}`);
   console.log(`operator: ${currentOperator}`);
   console.log(`secondNumber: ${secondNumber}`);
+  console.log(`result: ${result}`);
+  return result;
 };
