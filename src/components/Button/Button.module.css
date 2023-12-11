@@ -7,8 +7,8 @@
     padding: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #fe3980;
-    border: 2px solid #c14f76;
+    background-color: #aa013e;
+    border: 2px solid #5d0022;
     border-radius: 20px;
     color: #fcfffc;
     font-size: 22px;
@@ -17,6 +17,6 @@
 }
 
 .main:hover {
-    background-color: orange;
-    border: 2px solid orange;
+    background-color: #cc8400;
+    border: 2px solid #cc8400;
 }
